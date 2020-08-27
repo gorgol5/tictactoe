@@ -1,0 +1,12 @@
+.wrapper div {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin: 10px;
+  color: white;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
