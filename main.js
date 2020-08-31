@@ -27,9 +27,20 @@ const players = (name) => {
       });
     });
   };
-  return { name, playerOneMove };
+  const playerSecondMove = () => {
+    const divs = document.querySelectorAll(".gameboard-div");
+    divs.forEach((div) => {
+      div.addEventListener("click", () => {
+        z = div.dataset.place;
+        Gameboard.arr[z] = "o";
+        div.innerText = "o";
+      });
+    });
+  };
+  return { name, playerOneMove, playerSecondMove };
 };
 
 const player = players("player");
 
 player.playerOneMove();
+player.playerSecondMove();
